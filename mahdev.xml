@@ -2545,6 +2545,42 @@ if(6<=pagelist&&4>page){document.write('<div id="page-rc-tooltip"><div class = "
     </nav>
   </div>
 </aside>
+
+<!-- Sidebar accessibility: ARIA attributes + keyboard support -->
+<style>
+.nav-category .nav-link[role="button"]{cursor:pointer}
+.nav-category .nav-item:focus-within>.nav-link{outline:2px solid rgba(0,123,255,0.18);outline-offset:2px}
+.nav-category .nav-item.open>.dropdown-menu{display:block}
+</style>
+<script>
+(function(){
+  var nodes = document.querySelectorAll('.nav-category .nav-item');
+  nodes.forEach(function(li, idx){
+    var toggle = li.querySelector('> a.nav-link');
+    var submenu = li.querySelector('> ul.dropdown-menu');
+    if(toggle && submenu){
+      var id = 'aside-submenu-' + idx;
+      submenu.id = id;
+      toggle.setAttribute('aria-haspopup','true');
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-controls', id);
+      toggle.setAttribute('role','button');
+      toggle.tabIndex = 0;
+      // click toggles
+      toggle.addEventListener('click', function(e){ e.preventDefault(); var open = li.classList.toggle('open'); toggle.setAttribute('aria-expanded', open); });
+      // keyboard support: Enter/Space to toggle, Esc to close, ArrowDown to focus first item
+      toggle.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); var open = li.classList.toggle('open'); toggle.setAttribute('aria-expanded', open); }
+        else if(e.key === 'Escape'){ li.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.focus(); }
+        else if(e.key === 'ArrowDown'){ if(!li.classList.contains('open')){ li.classList.add('open'); toggle.setAttribute('aria-expanded','true'); } var first = submenu.querySelector('a'); if(first) first.focus(); }
+      });
+    }
+  });
+  // Close open menus when clicking outside
+  document.addEventListener('click', function(e){ if(!e.target.closest('.nav-category')){ document.querySelectorAll('.nav-category .nav-item.open').forEach(function(li){ li.classList.remove('open'); var t = li.querySelector('> a.nav-link'); if(t) t.setAttribute('aria-expanded','false'); }); } });
+})();
+</script>
+
 <div class='aside-item'>
     <div class='heading'>
         <h2 class='title-head'><a href='#' title='Most view'>Most view</a></h2>
