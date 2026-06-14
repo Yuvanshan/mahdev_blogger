@@ -860,19 +860,32 @@ header nav .nav-item>a:focus {
   }
   function hideLoader(){
     var loader=document.getElementById('mahdev-page-loader');
-    if(loader) loader.classList.add('hidden');
+    if(loader){
+      loader.classList.add('hidden');
+      setTimeout(function(){
+        if(loader.parentNode) loader.parentNode.removeChild(loader);
+      }, 400);
+    }
   }
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',function(){
-      createLoader();
-      window.addEventListener('load',hideLoader);
-      setTimeout(hideLoader,10000);
-    });
-  } else {
+  function initLoader(){
     createLoader();
-    window.addEventListener('load',hideLoader);
-    setTimeout(hideLoader,10000);
+    var shownAt = Date.now();
+    function hideAfterDelay(){
+      var elapsed = Date.now() - shownAt;
+      if(elapsed >= 2000){
+        hideLoader();
+      } else {
+        setTimeout(hideLoader, 2000 - elapsed);
+      }
+    }
+    if(document.readyState === 'complete'){
+      hideAfterDelay();
+    } else {
+      window.addEventListener('load', hideAfterDelay);
+    }
+    setTimeout(hideAfterDelay, 10000);
   }
+  initLoader();
 })();
 
 WebFontConfig={google:{families:["Roboto:400,500,700"]},custom:{families:["FontAwesome"],urls:["https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"]}},function(){var e=document.createElement("script");e.src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",e.type="text/javascript",e.async="true";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
@@ -1038,6 +1051,55 @@ return c};return getElementsByClassName(a,b,c)};String.prototype.reverse=functio
   
 <head/>
 &lt;body&gt;
+
+<!-- Page Loader: animated balloons (enhanced visuals) -->
+<div id="page-loader" style="z-index:99999;position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff7fb 0%,#f0fcff 100%);">
+  <div style="text-align:center;">
+    <div class="loader-balloons" style="position:relative;width:260px;height:140px;margin:0 auto;overflow:visible;">
+      <div class="balloon b1">🎈<span class="string"></span></div>
+      <div class="balloon b2">🎈<span class="string"></span></div>
+      <div class="balloon b3">🎈<span class="string"></span></div>
+      <div class="balloon b4">🎈<span class="string"></span></div>
+      <div class="balloon b5">🎈<span class="string"></span></div>
+    </div>
+    <div class="loader-caption" style="margin-top:12px;font-weight:700;color:#2c3e50;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">Preparing something delightful…</div>
+  </div>
+</div>
+
+<style>
+.loader-balloons{pointer-events:none}
+.balloon{position:absolute;font-size:40px;text-shadow:0 2px 6px rgba(0,0,0,0.08);filter:drop-shadow(0 4px 6px rgba(0,0,0,0.06));}
+.balloon .string{display:block;width:2px;height:36px;background:linear-gradient(#bfbfbf,#888);position:absolute;left:50%;top:60%;transform:translateX(-50%) rotate(6deg);border-radius:1px;opacity:.9}
+.b1{left:12%;color:#ff6b6b;animation:rise1 3.6s ease-in-out infinite, sway1 3s ease-in-out infinite;animation-delay:0s}
+.b2{left:30%;color:#ffc75f;animation:rise2 4.2s ease-in-out infinite, sway2 3.4s ease-in-out infinite;animation-delay:0.12s}
+.b3{left:50%;color:#7bed9f;animation:rise3 3.8s ease-in-out infinite, sway3 3.2s ease-in-out infinite;animation-delay:0.24s}
+.b4{left:68%;color:#70a1ff;animation:rise4 4.4s ease-in-out infinite, sway4 3.6s ease-in-out infinite;animation-delay:0.36s}
+.b5{left:86%;color:#e056fd;animation:rise5 3.4s ease-in-out infinite, sway5 2.8s ease-in-out infinite;animation-delay:0.48s}
+@keyframes rise1{0%{transform:translate(-50%,20px) scale(.9);opacity:0}18%{opacity:1}100%{transform:translate(-50%,-280px) scale(1);opacity:0}}
+@keyframes rise2{0%{transform:translate(-50%,10px) scale(.94);opacity:0}16%{opacity:1}100%{transform:translate(-50%,-300px) scale(1);opacity:0}}
+@keyframes rise3{0%{transform:translate(-50%,24px) scale(.9);opacity:0}14%{opacity:1}100%{transform:translate(-50%,-260px) scale(1);opacity:0}}
+@keyframes rise4{0%{transform:translate(-50%,8px) scale(.95);opacity:0}20%{opacity:1}100%{transform:translate(-50%,-290px) scale(1);opacity:0}}
+@keyframes rise5{0%{transform:translate(-50%,14px) scale(.92);opacity:0}17%{opacity:1}100%{transform:translate(-50%,-240px) scale(1);opacity:0}}
+@keyframes sway1{0%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-46%) translateY(0)}100%{transform:translateX(-50%) translateY(0)}}
+@keyframes sway2{0%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-42%) translateY(0)}100%{transform:translateX(-50%) translateY(0)}}
+@keyframes sway3{0%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-54%) translateY(0)}100%{transform:translateX(-50%) translateY(0)}}
+@keyframes sway4{0%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-56%) translateY(0)}100%{transform:translateX(-50%) translateY(0)}}
+@keyframes sway5{0%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-44%) translateY(0)}100%{transform:translateX(-50%) translateY(0)}}
+#page-loader.hide{opacity:0;pointer-events:none;transition:opacity .6s ease}
+@media (max-width:480px){.balloon{font-size:28px}.balloon .string{height:26px}}
+</style>
+
+<script>
+;(function(){
+  function removeLoader(){
+    var el = document.getElementById('page-loader');
+    if(!el) return; el.classList.add('hide'); setTimeout(function(){el.style.display='none';},700);
+  }
+  // safety: hide loader after 6s in case load event doesn't fire
+  window.addEventListener('load', removeLoader);
+  setTimeout(removeLoader, 6000);
+})();
+</script>
 <b:if cond='data:blog.url != data:blog.homepageUrl'>
 <div id='fb-root'/>
 <script async='async' defer='defer' src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.6'/>
@@ -1977,7 +2039,7 @@ $(&quot;.nav&gt;li&gt;a[href=&#39;&quot; + $(this).attr(&quot;href&quot;) + &quo
   <b:widget id='HTML7' locked='false' title='' type='HTML'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<div class='flash-sale-title'>
-			Related Categories
+        Categories
 		</div>
 		<div class='products products-view-grid'>
 			
@@ -2012,11 +2074,11 @@ $(&quot;.nav&gt;li&gt;a[href=&#39;&quot; + $(this).attr(&quot;href&quot;) + &quo
 			</div>
 			
 			
-		<div class='item col-md-3 col-sm-3 col-xs-6'>
-				<a href='/search/label/Cosmatics' title='Cosmatics'>
+      <div class='item col-md-3 col-sm-3 col-xs-6'>
+      <a href='/search/label/Cosmetics' title='Cosmetics'>
 					<img alt='Phụ Kiện Trang Trí' class='img-responsive center-block' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9PBYUShzau0oetJjlzcdy3-ty7hixtNjGZkLfy1GaXRAiMUVrhM1aIiYkNzKcgW5RpmRBHAHAVZA6xyv1InMf4cxgI4X9svMRG2BVbKoWO-5JRItbHlU5CGx4nrzxn7IeI4PRA4RlcF8/s320/Capture+%25281%2529.png'/>
 					<div class='category-content'>
-						<h5>Cosmatics</h5>
+            <h5>Cosmetics</h5>
 					</div>
 				</a>
 			</div>
@@ -2081,7 +2143,7 @@ $(&quot;.nav&gt;li&gt;a[href=&#39;&quot; + $(this).attr(&quot;href&quot;) + &quo
     <h3 class='title_blog'>
         <a href='#' title='Real Plants'>Real Plants</a>
     </h3>
-<script src='/feeds/posts/default/-/Real Plant?max-results=20&orderby=published&alt=json-in-script&callback=labelproduct'>
+<script src='/feeds/posts/default/-/Real Plants?max-results=20&orderby=published&alt=json-in-script&callback=labelproduct'>
 </div>
 <div class='clear'></div></script></div>]]></b:widget-setting>
     </b:widget-settings>
@@ -2320,7 +2382,7 @@ if(6<=pagelist&&4>page){document.write('<div id="page-rc-tooltip"><div class = "
                         <li class='ng-scope ng-has-child2'><a href='/search/label/Phone Accessories' title='Phone Accessories'>Phone Accessories</a></li>
                         <li class='ng-scope ng-has-child2'><a href='/search/label/Computer Accessories' title='Computer Accessories'>Computer Accessories</a></li>
                         <li class='ng-scope ng-has-child2'><a href='/search/label/Music Speaker' title='Music Speaker'>Music Speaker</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/LapTop' title='Laptop'>LapTop</a></li>
+                        <li class='ng-scope ng-has-child2'><a href='/search/label/Laptop' title='Laptop'>Laptop</a></li>
                       <li class='ng-scope ng-has-child2'><a href='/search/label/Accessories' title='Accessories'>Accessories</a></li>
 					</ul>
 				</li>
@@ -2353,7 +2415,7 @@ if(6<=pagelist&&4>page){document.write('<div id="page-rc-tooltip"><div class = "
 					</ul>
 				</li>
               <li class='nav-item '>
-					<a class='nav-link' href='#' title='Real Plant'><i aria-hidden='true' class='fa fa-caret-right'/> Real Plants</a>
+          <a class='nav-link' href='#' title='Real Plants'><i aria-hidden='true' class='fa fa-caret-right'/> Real Plants</a>
 					<i class='fa fa-angle-down'/>
 					<ul class='dropdown-menu'>
 					 <li class='ng-scope ng-has-child2'><a href='/search/label/Indoor Plants' title='Indoor Plants'>Indoor Plants</a></li>
@@ -3986,7 +4048,7 @@ $(&quot;#popup-cart&quot;).css(&quot;display&quot;, &quot;block&quot;);
     </div>
     <div class='la-scroll-fix-infor-user'>
        <div class='la-nav-menu-items'>
-    <div class='la-title-nav-items'><strong>Category</strong></div>
+    <div class='la-title-nav-items'><strong>Categories</strong></div>
     <ul class='la-nav-list-items'>
 
         <!-- 1. DECORATIONS -->
