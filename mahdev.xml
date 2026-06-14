@@ -1173,139 +1173,78 @@ return c};return getElementsByClassName(a,b,c)};String.prototype.reverse=functio
                   <div class='cart-right'>
                     <span class='count_item_pr simpleCart_quantity'>
                     </span>
-                  <div class='aside-content'>
-                    <nav class='nav-category navbar-toggleable-md'>
-                      <ul class='nav navbar-pills'>
-                        <!-- 1. EVENT DECORATION & MANAGEMENT -->
-                        <li class='nav-item '>
-                          <a class='nav-link' href='#' title='Event Decoration &amp; Management'><i aria-hidden='true' class='fa fa-caret-right'/> 🎉 Decorations</a>
-                          <i class='fa fa-angle-down'/>
-                          <ul class='dropdown-menu'>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/wedding decoration' title='Wedding Decorations'>Wedding Decorations</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Stage Decoration' title='Stage Decoration'>Stage Decoration</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Floral Arrangements' title='Floral Arrangements'>Floral Arrangements</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Mandap Decoration' title='Mandap Decoration'>Mandap Decoration</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Table Setup' title='Table &amp; Chair Setup'>Table &amp; Chair Setup</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Wedding Lighting' title='Wedding Lighting'>Wedding Lighting</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Bridal Entrance' title='Bridal Entrance Decor'>Bridal Entrance Decor</a></li>
-                          </ul>
-                        </li>
-
-                        <!-- 2. PHOTOGRAPHY & VIDEOGRAPHY -->
-                        <li class='nav-item '>
-                          <a class='nav-link' href='#' title='Photography &amp; Videography'><i aria-hidden='true' class='fa fa-caret-right'/> 📸 Photography</a>
-                          <i class='fa fa-angle-down'/>
-                          <ul class='dropdown-menu'>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Wedding Photography' title='Wedding Photography'>Wedding Photography</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Candid Photography' title='Candid Photography'>Candid Photography</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Traditional Photography' title='Traditional Photography'>Traditional Photography</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Pre Wedding Shoot' title='Pre-Wedding Shoot'>Pre-Wedding Shoot</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Wedding Albums' title='Wedding Albums'>Wedding Albums</a></li>
-                          </ul>
-                        </li>
-
-                        <!-- 3. IT & SOFTWARE SOLUTIONS -->
-                        <li class='nav-item '>
-                          <a class='nav-link' href='#' title='IT &amp; Software Solutions'><i aria-hidden='true' class='fa fa-caret-right'/> 💻 IT Solutions</a>
-                          <i class='fa fa-angle-down'/>
-                          <ul class='dropdown-menu'>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Website Development' title='Website Development'>Website Development</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Mobile App Development' title='Mobile App Development'>Mobile App Development</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/POS Systems' title='POS Systems'>POS Systems</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Custom Software' title='Custom Software'>Custom Software</a></li>
-                          </ul>
-                        </li>
-
-                        <!-- 4. TRAVEL & TOURISM -->
-                        <li class='nav-item '>
-                          <a class='nav-link' href='#' title='Travel &amp; Tourism'><i aria-hidden='true' class='fa fa-caret-right'/> ✈️ Travels</a>
-                          <i class='fa fa-angle-down'/>
-                          <ul class='dropdown-menu'>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Air Ticket' title='Air Ticket Booking'>Air Ticket Booking</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Tour Packages' title='Tour Packages'>Tour Packages</a></li>
-                          <li class='ng-scope ng-has-child2'><a href='/search/label/Hotel Reservations' title='Hotel Reservations'>Hotel Reservations</a></li>
-                          </ul>
-                        </li>
-
-                        <!-- 5. CONSULTING -->
-                        <li class='nav-item '>
-                          <a class='nav-link' href='#' title='Consulting'>🧠 Consulting</a>
-                          <i class='fa fa-angle-down'/>
-                          <ul class='dropdown-menu'>
-                          <li class='ng-scope ng-has-child2'><a href='#' title='Coming Soon'>🚀 Coming Soon</a></li>
-                          </ul>
-                        </li>
-
-                        <!-- 6. OTHER -->
-                        <li class='nav-item '>
-                          <a class='nav-link' href='#' title='Other'>🔖 Other</a>
-                          <i class='fa fa-angle-down'/>
-                          <ul class='dropdown-menu'>
-                          <li class='ng-scope ng-has-child2'><a href='#' title='Coming Soon'>🚀 Coming Soon</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                  <i class='fa fa-cart-arrow-down'>
-                  </i>
-                  <div class='basket-item-count count_item_pr simpleCart_quantity'>0
+                    <div class='basket-item-count count_item_pr simpleCart_quantity'>0
+                    </div>
                   </div>
                 </a>
                 <div class='aside-content'>
                   <nav class='nav-category navbar-toggleable-md'>
                     <ul class='nav navbar-pills'>
-                      <!-- 1. EVENT DECORATION & MANAGEMENT -->
-                      <li class='nav-item '>
-                        <a class='nav-link' href='#' title='Event Decoration &amp; Management'><i aria-hidden='true' class='fa fa-caret-right'/> 🎉 Decorations</a>
-                        <i class='fa fa-angle-down'/>
-                        <ul class='dropdown-menu'>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/wedding decoration' title='Wedding Decorations'>Wedding Decorations</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Stage Decoration' title='Stage Decoration'>Stage Decoration</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Floral Arrangements' title='Floral Arrangements'>Floral Arrangements</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Mandap Decoration' title='Mandap Decoration'>Mandap Decoration</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Table Setup' title='Table &amp; Chair Setup'>Table &amp; Chair Setup</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Wedding Lighting' title='Wedding Lighting'>Wedding Lighting</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Bridal Entrance' title='Bridal Entrance Decor'>Bridal Entrance Decor</a></li>
-                        </ul>
-                      </li>
+        <!-- ALL SERVICES -->
+        <li class='nav-item '>
+          <a class='nav-link' href='/search/label/all' title='All Services'>✨ All Services</a>
+        </li>
 
-                      <!-- 2. PHOTOGRAPHY & VIDEOGRAPHY -->
-                      <li class='nav-item '>
-                        <a class='nav-link' href='#' title='Photography &amp; Videography'><i aria-hidden='true' class='fa fa-caret-right'/> 📸 Photography</a>
-                        <i class='fa fa-angle-down'/>
-                        <ul class='dropdown-menu'>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Wedding Photography' title='Wedding Photography'>Wedding Photography</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Candid Photography' title='Candid Photography'>Candid Photography</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Traditional Photography' title='Traditional Photography'>Traditional Photography</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Pre Wedding Shoot' title='Pre-Wedding Shoot'>Pre-Wedding Shoot</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Wedding Albums' title='Wedding Albums'>Wedding Albums</a></li>
-                        </ul>
-                      </li>
+        <!-- 1. EVENT DECORATION & MANAGEMENT -->
+        <li class='nav-item '>
+          <a class='nav-link' href='#' title='Event Decoration &amp; Management'><i aria-hidden='true' class='fa fa-caret-right'/> 🎉 Decorations</a>
+          <i class='fa fa-angle-down'/>
+          <ul class='dropdown-menu'>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/wedding decoration' title='Wedding Decorations'>Wedding Decorations</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Stage Decoration' title='Stage Decoration'>Stage Decoration</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Floral Arrangements' title='Floral Arrangements'>Floral Arrangements</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Mandap Decoration' title='Mandap Decoration'>Mandap Decoration</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Table Setup' title='Table &amp; Chair Setup'>Table &amp; Chair Setup</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Wedding Lighting' title='Wedding Lighting'>Wedding Lighting</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Bridal Entrance' title='Bridal Entrance Decor'>Bridal Entrance Decor</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Birthday Celebrations' title='Birthday Celebrations'>Birthday Celebrations</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Corporate Events' title='Corporate Events'>Corporate Events</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Welcome Functions' title='Welcome Functions'>Welcome Functions</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Stage Venue Setup' title='Stage &amp; Venue Setup'>Stage &amp; Venue Setup</a></li>
+          </ul>
+        </li>
 
-                      <!-- 3. IT & SOFTWARE SOLUTIONS -->
-                      <li class='nav-item '>
-                        <a class='nav-link' href='#' title='IT &amp; Software Solutions'><i aria-hidden='true' class='fa fa-caret-right'/> 💻 IT Solutions</a>
-                        <i class='fa fa-angle-down'/>
-                        <ul class='dropdown-menu'>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Website Development' title='Website Development'>Website Development</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Mobile App Development' title='Mobile App Development'>Mobile App Development</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/POS Systems' title='POS Systems'>POS Systems</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Custom Software' title='Custom Software'>Custom Software</a></li>
-                        </ul>
-                      </li>
+        <!-- 2. PHOTOGRAPHY & VIDEOGRAPHY -->
+        <li class='nav-item '>
+          <a class='nav-link' href='#' title='Photography &amp; Videography'><i aria-hidden='true' class='fa fa-caret-right'/> 📸 Photography</a>
+          <i class='fa fa-angle-down'/>
+          <ul class='dropdown-menu'>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Wedding Photography' title='Wedding Photography'>Wedding Photography</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Candid Photography' title='Candid Photography'>Candid Photography</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Traditional Photography' title='Traditional Photography'>Traditional Photography</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Pre Wedding Shoot' title='Pre-Wedding Shoot'>Pre-Wedding Shoot</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Wedding Albums' title='Wedding Albums'>Wedding Albums</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Same Day Edit' title='Same Day Edit'>Same Day Edit</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Event Photography' title='Event Photography'>Event Photography</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Videography' title='Videography'>Videography</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Drone Coverage' title='Drone Coverage'>Drone Coverage</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Studio Sessions' title='Studio Sessions'>Studio Sessions</a></li>
+          </ul>
+        </li>
 
-                      <!-- 4. TRAVEL & TOURISM -->
-                      <li class='nav-item '>
-                        <a class='nav-link' href='#' title='Travel &amp; Tourism'><i aria-hidden='true' class='fa fa-caret-right'/> ✈️ Travels</a>
-                        <i class='fa fa-angle-down'/>
-                        <ul class='dropdown-menu'>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Air Ticket' title='Air Ticket Booking'>Air Ticket Booking</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Tour Packages' title='Tour Packages'>Tour Packages</a></li>
-                        <li class='ng-scope ng-has-child2'><a href='/search/label/Hotel Reservations' title='Hotel Reservations'>Hotel Reservations</a></li>
-                        </ul>
-                      </li>
+        <!-- 3. IT & SOFTWARE SOLUTIONS -->
+        <li class='nav-item '>
+          <a class='nav-link' href='#' title='IT &amp; Software Solutions'><i aria-hidden='true' class='fa fa-caret-right'/> 💻 IT Solutions</a>
+          <i class='fa fa-angle-down'/>
+          <ul class='dropdown-menu'>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Website Development' title='Website Development'>Website Development</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Mobile App Development' title='Mobile App Development'>Mobile App Development</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/POS Systems' title='POS Systems'>POS Systems</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Custom Software' title='Custom Software'>Custom Software</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/System Integration' title='System Integration'>System Integration</a></li>
+          </ul>
+        </li>
 
+        <!-- 4. TRAVEL & TOURISM -->
+        <li class='nav-item '>
+          <a class='nav-link' href='#' title='Travel &amp; Tourism'><i aria-hidden='true' class='fa fa-caret-right'/> ✈️ Travels</a>
+          <i class='fa fa-angle-down'/>
+          <ul class='dropdown-menu'>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Air Ticket' title='Air Ticket Booking'>Air Ticket Booking</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Tour Packages' title='Tour Packages'>Tour Packages</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Hotel Reservations' title='Hotel Reservations'>Hotel Reservations</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Visa Assistance' title='Visa Assistance'>Visa Assistance</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Transportation Services' title='Transportation Services'>Transportation</a></li>
                       <!-- 5. CONSULTING -->
                       <li class='nav-item '>
                         <a class='nav-link' href='#' title='Consulting'>🧠 Consulting</a>
@@ -1327,11 +1266,13 @@ return c};return getElementsByClassName(a,b,c)};String.prototype.reverse=functio
                   </nav>
                 </div>
 
-<div class='top-subtotal'>Total: <span class='price simpleCart_total'/></div>
+                <div class='top-subtotal'>Total: <span class='price simpleCart_total'/></div>
 
-</div>
-                    <div><div class='actions clearfix'><a class='btn btn-gray btn-checkout' href='/p/checkout.html' title='Checkout'><span>Checkout</span></a><a class='view-cart btn btn-white margin-left-5' href='/p/my-cart.html' title='Go to Cart'><span>Go to Cart</span></a></div></div>
-                  </ul>
+                <div>
+                  <div class='actions clearfix'>
+                    <a class='btn btn-gray btn-checkout' href='/p/checkout.html' title='Checkout'><span>Checkout</span></a>
+                    <a class='view-cart btn btn-white margin-left-5' href='/p/my-cart.html' title='Go to Cart'><span>Go to Cart</span></a>
+                  </div>
                 </div>
               </div>
               <div class='customer-support-text clearfix'>
@@ -2472,6 +2413,11 @@ if(6<=pagelist&&4>page){document.write('<div id="page-rc-tooltip"><div class = "
   <div class='aside-content'>
     <nav class='nav-category navbar-toggleable-md'>
       <ul class='nav navbar-pills'>
+        <!-- ALL SERVICES -->
+        <li class='nav-item '>
+          <a class='nav-link' href='/search/label/all' title='All Services'>✨ All Services</a>
+        </li>
+
         <!-- 1. EVENT DECORATION & MANAGEMENT -->
         <li class='nav-item '>
           <a class='nav-link' href='#' title='Event Decoration &amp; Management'><i aria-hidden='true' class='fa fa-caret-right'/> 🎉 Decorations</a>
@@ -2497,6 +2443,7 @@ if(6<=pagelist&&4>page){document.write('<div id="page-rc-tooltip"><div class = "
             <li class='ng-scope ng-has-child2'><a href='/search/label/Traditional Photography' title='Traditional Photography'>Traditional Photography</a></li>
             <li class='ng-scope ng-has-child2'><a href='/search/label/Pre Wedding Shoot' title='Pre-Wedding Shoot'>Pre-Wedding Shoot</a></li>
             <li class='ng-scope ng-has-child2'><a href='/search/label/Wedding Albums' title='Wedding Albums'>Wedding Albums</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Same Day Edit' title='Same Day Edit'>Same Day Edit</a></li>
           </ul>
         </li>
 
@@ -2509,6 +2456,7 @@ if(6<=pagelist&&4>page){document.write('<div id="page-rc-tooltip"><div class = "
             <li class='ng-scope ng-has-child2'><a href='/search/label/Mobile App Development' title='Mobile App Development'>Mobile App Development</a></li>
             <li class='ng-scope ng-has-child2'><a href='/search/label/POS Systems' title='POS Systems'>POS Systems</a></li>
             <li class='ng-scope ng-has-child2'><a href='/search/label/Custom Software' title='Custom Software'>Custom Software</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/System Integration' title='System Integration'>System Integration</a></li>
           </ul>
         </li>
 
@@ -2520,6 +2468,8 @@ if(6<=pagelist&&4>page){document.write('<div id="page-rc-tooltip"><div class = "
             <li class='ng-scope ng-has-child2'><a href='/search/label/Air Ticket' title='Air Ticket Booking'>Air Ticket Booking</a></li>
             <li class='ng-scope ng-has-child2'><a href='/search/label/Tour Packages' title='Tour Packages'>Tour Packages</a></li>
             <li class='ng-scope ng-has-child2'><a href='/search/label/Hotel Reservations' title='Hotel Reservations'>Hotel Reservations</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Visa Assistance' title='Visa Assistance'>Visa Assistance</a></li>
+            <li class='ng-scope ng-has-child2'><a href='/search/label/Transportation Services' title='Transportation Services'>Transportation</a></li>
           </ul>
         </li>
 
@@ -2552,7 +2502,7 @@ if(6<=pagelist&&4>page){document.write('<div id="page-rc-tooltip"><div class = "
 .nav-category .nav-item:focus-within>.nav-link{outline:2px solid rgba(0,123,255,0.18);outline-offset:2px}
 .nav-category .nav-item.open>.dropdown-menu{display:block}
 </style>
-<script>
+<script type='text/javascript'><![CDATA[
 (function(){
   var nodes = document.querySelectorAll('.nav-category .nav-item');
   nodes.forEach(function(li, idx){
@@ -2579,7 +2529,7 @@ if(6<=pagelist&&4>page){document.write('<div id="page-rc-tooltip"><div class = "
   // Close open menus when clicking outside
   document.addEventListener('click', function(e){ if(!e.target.closest('.nav-category')){ document.querySelectorAll('.nav-category .nav-item.open').forEach(function(li){ li.classList.remove('open'); var t = li.querySelector('> a.nav-link'); if(t) t.setAttribute('aria-expanded','false'); }); } });
 })();
-</script>
+]]></script>
 
 <div class='aside-item'>
     <div class='heading'>
@@ -4171,6 +4121,9 @@ $(&quot;#popup-cart&quot;).css(&quot;display&quot;, &quot;block&quot;);
        <div class='la-nav-menu-items'>
     <div class='la-title-nav-items'><strong>Categories</strong></div>
     <ul class='la-nav-list-items'>
+        <li class='ng-scope'>
+            <a href='/search/label/all' title='All Services'>✨ All Services</a>
+        </li>
 
         <!-- 1. DECORATIONS -->
         <li class='ng-scope ng-has-child1'>
